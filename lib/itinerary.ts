@@ -294,12 +294,12 @@ function buildSeedTrip(): Trip {
         activities: [
           {
             id: uid(),
-            time: "08:00",
+            time: "11:30",
             type: "restaurant",
-            title: "Fruehstueck: Panaderia Los Abuelos",
-            description: "Letztes Fruehstueck auf Lanzarote – frische Broetchen und Kaffee vor der Ueberfahrt.",
-            location: "Panaderia Los Abuelos, Playa Blanca, Lanzarote, Spain",
-            mapQuery: "Panaderia Los Abuelos Playa Blanca Lanzarote",
+            title: "Spaetes Fruehstueck: Cafe La Ola",
+            description: "Kinga: schrecklicher Kaffee aber sie haben Hafermilch. Yeey! Erstes Fruehstueck auf Fuerteventura nach der Ankunft.",
+            location: "Cafe La Ola, Corralejo, Fuerteventura, Spain",
+            mapQuery: "Cafe La Ola Corralejo Fuerteventura",
           },
           {
             id: uid(),
@@ -356,10 +356,10 @@ function buildSeedTrip(): Trip {
             id: uid(),
             time: "09:00",
             type: "restaurant",
-            title: "Frühstück: Amiga Mia",
-            description: "Thilo: Smoothies, Bananabread, Brownies, Bocadillos – alles geil. Und eine cute Dachterrasse. Kinga: Bester Karottenkuchen der Insel + guter Kaffee.",
-            location: "Amiga Mia, Corralejo, Fuerteventura, Spain",
-            mapQuery: "Amiga Mia Cafeteria Heladeria Corralejo Fuerteventura",
+            title: "Fruehstueck: Panaderia Los Abuelos",
+            description: "Ort folgt.",
+            location: "Panaderia Los Abuelos, Fuerteventura, Spain",
+            mapQuery: "Panaderia Los Abuelos Fuerteventura",
           },
           {
             id: uid(),
