@@ -404,6 +404,10 @@ function buildSeedTrip(): Trip {
 }
 
 export function loadTrip(): Trip {
+  return buildSeedTrip()
+}
+
+export function loadTripWithEdits(): Trip {
   if (typeof window === "undefined") return buildSeedTrip()
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY)
