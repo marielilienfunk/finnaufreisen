@@ -137,7 +137,7 @@ function buildSeedTrip(): Trip {
         id: uid(),
         date: "2026-06-17",
         title: "Gravel Bike Runde",
-        summary: "Gravel-Bike-Tour entlang der Südwestküste: Janubio → Los Hervideros → El Golfo → Yaiza → Playa Blanca. Ca. 45–55 km, 400–700 hm, 3–5 Stunden mit Pausen.",
+        summary: "Gravel-Bike-Tour entlang der Südwestküste: Janubio → Los Hervideros → El Golfo → Timanfaya → Yaiza → Playa Blanca. Ca. 45–55 km, 400–700 hm, 3–5 Stunden mit Pausen.",
         activities: [
           {
             id: uid(),
@@ -183,8 +183,16 @@ function buildSeedTrip(): Trip {
           {
             id: uid(),
             time: "15:00",
+            type: "sightseeing",
+            title: "Stop 4: Nationalpark Timanfaya",
+            description: "Feuerberge und Geysir-Demonstration – die spektakuläre Vulkanlandschaft der Insel.",
+            location: "Parque Nacional de Timanfaya, Lanzarote, Spain",
+          },
+          {
+            id: uid(),
+            time: "16:30",
             type: "bike-tour",
-            title: "Stop 4: Yaiza",
+            title: "Stop 5: Yaiza",
             description: "Eines der schönsten weißen Dörfer der Insel – kurze Pause.",
             location: "Yaiza, Lanzarote, Spain",
           },
