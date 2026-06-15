@@ -407,19 +407,6 @@ export function loadTrip(): Trip {
   return buildSeedTrip()
 }
 
-export function loadTripWithEdits(): Trip {
-  if (typeof window === "undefined") return buildSeedTrip()
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY)
-    if (!raw) return buildSeedTrip()
-    const parsed = JSON.parse(raw) as Trip
-    if (!parsed?.days) return buildSeedTrip()
-    return parsed
-  } catch {
-    return buildSeedTrip()
-  }
-}
-
 export function saveTrip(trip: Trip): void {
   if (typeof window === "undefined") return
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(trip))
