@@ -42,7 +42,7 @@ export const ACTIVITY_LABELS: Record<ActivityType, string> = {
   transport: "Transport",
 }
 
-const STORAGE_KEY = "daily-itinerary-trip-canaries-v1"
+const STORAGE_KEY = "daily-itinerary-trip-canaries-v2"
 
 /** Returns today's date as a local "YYYY-MM-DD" string. */
 export function todayISO(): string {
