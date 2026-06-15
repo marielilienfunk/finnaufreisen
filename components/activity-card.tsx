@@ -52,13 +52,13 @@ export function ActivityCard({ activity, last }: { activity: Activity; last: boo
         {/* Content */}
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2">
-            <span
-              className="text-[13px] font-semibold tabular-nums"
-              style={{ color }}
-            >
+            <span className="text-[13px] font-semibold tabular-nums text-muted-foreground">
               {activity.time}
             </span>
-            <span className="text-[11px] font-medium uppercase tracking-wide text-muted-foreground">
+            <span
+              className="text-[11px] font-semibold uppercase tracking-wide"
+              style={{ color }}
+            >
               {ACTIVITY_LABELS[activity.type]}
             </span>
           </div>
