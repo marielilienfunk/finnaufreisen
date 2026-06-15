@@ -258,7 +258,7 @@ function buildSeedTrip(): Trip {
             time: "14:00",
             type: "bike-tour",
             title: "Stop 3: Haría",
-            description: "Das „Tal der tausend Palmen" – perfekter Kaffee-Stopp.",
+            description: "Das 'Tal der tausend Palmen' - perfekter Kaffee-Stopp.",
             location: "Haría, Lanzarote, Spain",
           },
           {
