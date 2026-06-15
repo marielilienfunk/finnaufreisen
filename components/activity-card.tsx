@@ -73,11 +73,13 @@ export function ActivityCard({ activity, last }: { activity: Activity; last: boo
         </div>
       </div>
 
-      {query && (
-        <div className="border-t border-border">
-          <MapEmbed query={query} label={activity.location || query} />
-        </div>
-      )}
+      <div className="border-t border-border">
+        <MapEmbed
+          query={query || activity.location}
+          label={activity.location || query}
+          activityType={activity.type}
+        />
+      </div>
     </div>
   )
 }
