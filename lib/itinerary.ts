@@ -18,6 +18,8 @@ export type Activity = {
   mapQuery?: string
   /** Optional selectable options shown as bubbles, e.g. restaurant choices */
   options?: string[]
+  /** Optional per-option details (description + map). Index matches options[]. */
+  optionDetails?: { description?: string; location?: string; mapQuery?: string }[]
 }
 
 export type ItineraryDay = {
@@ -129,10 +131,14 @@ function buildSeedTrip(): Trip {
             id: uid(),
             time: "21:00",
             type: "dinner",
-            title: "Abendessen: La Chalanita",
-            description: "Caro empfiehlt: Canneloni oder die veggi Lasagne – und unbedingt einen Sangria bianco fuer den Espaniol-Vibe!",
-            location: "La Chalanita, Playa Blanca, Lanzarote, Spain",
-            mapQuery: "La Chalanita Playa Blanca Lanzarote",
+            title: "Abendessen: Ort folgt",
+            description: "Ort folgt.",
+            location: "Playa Blanca, Lanzarote, Spain",
+            options: ["La Chalanita", "1926 Pizzeria Napoletana"],
+            optionDetails: [
+              { description: "Caro: Lecki Schmecki ich war da noch nie aber wuerde mir auf jeden Fall die Canneloni reindonnern oder die veggi Lasagne. Fuer den espanioloooo vibe einen Sangria (am besten bianco !!!) Send pics du Mausebaer", mapQuery: "La Chalanita Playa Blanca Lanzarote", location: "La Chalanita, Playa Blanca, Lanzarote, Spain" },
+              { description: "Mereli: Hier lecker pizziiiiii", mapQuery: "1926 Pizzeria Napoletana Playa Blanca", location: "1926 Pizzeria Napoletana, Playa Blanca, Lanzarote, Spain" },
+            ],
           },
         ],
       },

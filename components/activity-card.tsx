@@ -37,6 +37,11 @@ export function ActivityCard({ activity, last }: { activity: Activity; last: boo
   const query = activity.mapQuery?.trim() || activity.location
   const [selectedOption, setSelectedOption] = useState<number | null>(null)
 
+  const activeDetail = selectedOption !== null ? activity.optionDetails?.[selectedOption] : undefined
+  const displayDescription = activeDetail?.description ?? activity.description
+  const displayQuery = (activeDetail?.mapQuery?.trim() || activeDetail?.location) ?? query
+  const displayLabel = activeDetail?.location ?? (activity.location || query)
+
   return (
     <div
       className="overflow-hidden rounded-2xl bg-card"
@@ -86,17 +91,17 @@ export function ActivityCard({ activity, last }: { activity: Activity; last: boo
           <h3 className="mt-0.5 text-[17px] font-semibold leading-snug tracking-tight text-foreground">
             {activity.title}
           </h3>
-          {activity.description && (
+          {displayDescription && (
             <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">
-              {activity.description}
+              {displayDescription}
             </p>
           )}
         </div>
       </div>
 
-      {query && (
+      {displayQuery && (
         <div className="border-t border-border">
-          <MapEmbed query={query} label={activity.location || query} />
+          <MapEmbed query={displayQuery} label={displayLabel} />
         </div>
       )}
     </div>
