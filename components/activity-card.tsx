@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import {
   Bike,
   Car,
@@ -34,6 +35,7 @@ export function ActivityCard({ activity, last }: { activity: Activity; last: boo
   const Icon = ICONS[activity.type]
   const color = TYPE_COLORS[activity.type]
   const query = activity.mapQuery?.trim() || activity.location
+  const [selectedOption, setSelectedOption] = useState<number | null>(null)
 
   return (
     <div
@@ -51,6 +53,25 @@ export function ActivityCard({ activity, last }: { activity: Activity; last: boo
 
         {/* Content */}
         <div className="min-w-0 flex-1">
+          {activity.options && activity.options.length > 0 && (
+            <div className="mb-2 flex flex-wrap gap-1.5">
+              {activity.options.map((opt, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setSelectedOption(selectedOption === i ? null : i)}
+                  className="rounded-full px-3 py-1 text-[12px] font-medium transition-all"
+                  style={
+                    selectedOption === i
+                      ? { background: color, color: "#fff" }
+                      : { background: `${color}18`, color }
+                  }
+                >
+                  {opt}
+                </button>
+              ))}
+            </div>
+          )}
           <div className="flex items-center gap-2">
             <span className="text-[13px] font-semibold tabular-nums text-muted-foreground">
               {activity.time}

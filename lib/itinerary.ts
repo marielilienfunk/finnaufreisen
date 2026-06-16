@@ -16,6 +16,8 @@ export type Activity = {
   location: string
   /** Optional query used for the embedded Google Map. Falls back to `location`. */
   mapQuery?: string
+  /** Optional selectable options shown as bubbles, e.g. restaurant choices */
+  options?: string[]
 }
 
 export type ItineraryDay = {
@@ -147,6 +149,7 @@ function buildSeedTrip(): Trip {
             title: "Fruehstueck: Ort folgt",
             description: "Ort folgt.",
             location: "Playa Blanca, Lanzarote, Spain",
+            options: ["Option 1", "Option 2", "Option 3"],
           },
           {
             id: uid(),
@@ -201,6 +204,7 @@ function buildSeedTrip(): Trip {
             id: uid(),
             time: "20:00",
             type: "dinner",
+            options: ["Option 1", "Option 2", "Option 3"],
             title: "Abendessen: Ort folgt",
             description: "Ort folgt.",
             location: "Playa Blanca, Lanzarote, Spain",
@@ -226,6 +230,7 @@ function buildSeedTrip(): Trip {
             id: uid(),
             time: "09:30",
             type: "restaurant",
+            options: ["Option 1", "Option 2", "Option 3"],
             title: "Fruehstueck: Ort folgt",
             description: "Ort folgt.",
             location: "Playa Blanca, Lanzarote, Spain",
@@ -276,6 +281,7 @@ function buildSeedTrip(): Trip {
             id: uid(),
             time: "20:00",
             type: "dinner",
+            options: ["Option 1", "Option 2", "Option 3"],
             title: "Abendessen: Ort folgt",
             description: "Ort folgt.",
             location: "Playa Blanca, Lanzarote, Spain",
@@ -318,6 +324,7 @@ function buildSeedTrip(): Trip {
             id: uid(),
             time: "13:00",
             type: "restaurant",
+            options: ["Option 1", "Option 2", "Option 3"],
             title: "Mittagessen: Ort folgt",
             description: "Ort folgt.",
             location: "Corralejo, Fuerteventura, Spain",
