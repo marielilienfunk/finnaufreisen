@@ -4,6 +4,8 @@ import { useState } from "react"
 import {
   Bike,
   Car,
+  Check,
+  ChevronRight,
   Landmark,
   type LucideIcon,
   Sparkles,
@@ -59,22 +61,31 @@ export function ActivityCard({ activity, last }: { activity: Activity; last: boo
         {/* Content */}
         <div className="min-w-0 flex-1">
           {activity.options && activity.options.length > 0 && (
-            <div className="mb-2 flex flex-wrap gap-1.5">
+            <div className="mb-2.5">
+              <p className="mb-1.5 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+                Option wählen
+              </p>
+              <div className="flex flex-wrap gap-2">
               {activity.options.map((opt, i) => (
                 <button
                   key={i}
                   type="button"
                   onClick={() => setSelectedOption(selectedOption === i ? null : i)}
-                  className="rounded-full px-3 py-1 text-[12px] font-medium transition-all"
+                  className="flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[13px] font-medium transition-all active:scale-95"
                   style={
                     selectedOption === i
-                      ? { background: color, color: "#fff" }
-                      : { background: `${color}18`, color }
+                      ? { background: color, color: "#fff", boxShadow: `0 2px 8px ${color}40` }
+                      : { background: "var(--card)", color, border: `1.5px solid ${color}`, boxShadow: "0 1px 3px rgba(0,0,0,0.08)" }
                   }
                 >
+                  {selectedOption === i
+                    ? <Check className="size-3.5" />
+                    : <ChevronRight className="size-3.5 opacity-60" />
+                  }
                   {opt}
                 </button>
               ))}
+              </div>
             </div>
           )}
           <div className="flex items-center gap-2">
