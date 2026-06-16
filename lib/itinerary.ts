@@ -344,7 +344,6 @@ function buildSeedTrip(): Trip {
             id: uid(),
             time: "13:00",
             type: "restaurant",
-            options: ["Option 1", "Option 2", "Option 3"],
             title: "Mittagessen",
             description: "",
             location: "Corralejo, Fuerteventura, Spain",
