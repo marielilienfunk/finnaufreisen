@@ -252,10 +252,11 @@ function buildSeedTrip(): Trip {
           {
             id: uid(),
             time: "11:15",
-            type: "bike-tour",
-            title: "Stop 1: Yaiza – kurze Pause",
-            description: "Weisses Dorf als erster Stop – Kaffee und das schoene Ortsbild geniessen.",
-            location: "Yaiza, Lanzarote, Spain",
+            type: "restaurant",
+            title: "Stop 1: Yaiza – Bar Stop",
+            description: "Mereli: sieht irgendwie aus als koennte es dir gefallen",
+            location: "Bar Stop, Yaiza, Lanzarote, Spain",
+            mapQuery: "Bar Stop Yaiza Lanzarote",
           },
           {
             id: uid(),
