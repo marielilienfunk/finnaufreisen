@@ -301,9 +301,9 @@ function buildSeedTrip(): Trip {
           {
             id: uid(),
             time: "17:00",
-            type: "transport",
+            type: "bike-tour",
             title: "Rueckfahrt nach Playa Blanca",
-            description: "Ca. 45 Min zurueck zur Unterkunft.",
+            description: "Ca. 25 km zurueck auf dem Rad – groesstenteils bergab.",
             location: "Playa Blanca, Lanzarote, Spain",
           },
           {
