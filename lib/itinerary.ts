@@ -186,9 +186,10 @@ function buildSeedTrip(): Trip {
             id: uid(),
             time: "13:00",
             type: "restaurant",
-            title: "Stop 3: El Golfo – Mittag am Kratersee",
-            description: "Frischer Fisch oder Tapas direkt am einzigartigen gruenen Kratersee. Grosse Mittagspause.",
-            location: "El Golfo, Lanzarote, Spain",
+            title: "Stop 3: Restaurante Barlovento – El Golfo",
+            description: "Mereli: hier ein pan con tomate essen mit potatoes und noch bisschen Gemuese",
+            location: "Restaurante Barlovento, El Golfo, Lanzarote, Spain",
+            mapQuery: "Restaurante Barlovento El Golfo Lanzarote",
           },
           {
             id: uid(),
